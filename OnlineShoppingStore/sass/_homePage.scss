@@ -1,0 +1,31 @@
+#home-page-nav {
+    .nav .glyphicon {
+        /*font-size: 2.1em;*/
+    }
+}
+
+#home-page-container {
+    .carousel-inner > .item {
+        img {
+            width: 100%;
+            margin: auto;
+        }
+    }
+
+    .img-category img {
+        width:100%;
+    }
+    .panel-body {
+        text-align:center;
+        border: none;
+    }
+    .panel-group {
+        margin-top:1em;
+    }
+    .icon-bar {
+        color:#23527C;
+    }
+    #category-panel {
+        margin-top: 3em;
+    }
+}

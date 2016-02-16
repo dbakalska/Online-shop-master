@@ -1,0 +1,1181 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Products in category</title>
+    <link href="libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/languages.min.css" rel="stylesheet" />
+    <link href="sass/index.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #E0F1FF">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="homePage.html" id="title">ИДИ купи</a>
+                    </div>
+                    <div class="collapse navbar-collapse row" id="myNavbar">
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown mega-dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукти<span class="caret"></span></a>
+
+                                <div class="dropdown-menu mega-dropdown-menu">
+                                    <div class="container-fluid">
+                                        <ul class="nav-list list-inline">
+                                            <li><a href="#"><img src="images/Samsung-Galaxy-S6-Edge-47.jpg"><div>Смартфони</div></a></li>
+                                            <li><a href="#"><img src="images/iPad_Air_2_and_iPad_mini_3.jpg" /><div>Таблети</div></a></li>
+                                            <li><a href="#"><img src="images/MacBook_Pro_Retina_2014_MG_1098.jpg" /><div>Лаптопи</div></a></li>
+                                            <li><a href="#"><img src="images/Special-offer.jpg" /><div>Промоции</div></a></li>
+                                            <li><a href="#"><img src="images/top-rated.jpg" /><div>Топ продукти</div></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="col-sm-3">
+                            <form action="" class="navbar-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="search" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </form>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" id="my-acount" data-toggle="modal" data-target="#modal-login">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <span>Моят акаунт</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="favorites">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                    <span>Любими</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="shoppingCart.html" id="my-bag">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    <span>Моята количка</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class=" lang-sm" lang="en"></span> / <span class="lang-sm" lang="bg"></span>
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#"><span class="lang-sm lang-lbl-en" lang="en"></span></a></li>
+                                    <li><a href="#"><span class="lang-sm lang-lbl" lang="bg"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+            <div id="modal-login" class="modal fade" role="dialog" >
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Вход</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+
+                                <form role="form" id="login-form">
+                                    <h2>Моля влезте в акаунта си</h2>
+                                    <hr class="colorgraph">
+                                    <div class="form-group">
+                                        <label for="display_name" class="control-label">Потребител</label>
+                                        <input type="text" name="display_name" id="display_name" class="form-control input-lg" tabindex="3">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="control-label">Парола</label>
+                                        <input type="password" name="password" id="password" class="form-control input-lg" tabindex="5">
+                                    </div>
+                                    <hr class="colorgraph">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Влез</a></div>
+                                        <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-primary btn-block btn-lg"  id="login-to-reg-btn">Регистрирай се</a></div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="modal-register" class="modal fade" role="dialog" >
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Регистрация</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+
+                                <form role="form" id="register-form">
+                                    <h2>Моля регистрирайте се</h2>
+                                    <hr class="colorgraph">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Име" tabindex="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Фамилия" tabindex="2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="display_name" id="username" class="form-control input-lg" placeholder="Потребител" tabindex="3">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Имейл" tabindex="4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="password" name="password" id="register-password" class="form-control input-lg" placeholder="Парола" tabindex="5">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Потвърди паролата" tabindex="6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="colorgraph">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-6"><input type="submit" value="Регистрирам се" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+        <div class="container" id="category-page">
+            <div>
+                <h2 class="page-header">Телефони</h2>
+            </div>
+            <div class="row main-container">
+                <aside class="col-sm-2 col-xs-12">
+                    <h4>Филтри</h4>
+                    <ul class="nav list-group">
+                        <li class="list-group-item active">
+                            <label for="price">Цена<input id="price" title="toggle all" type="checkbox" class="all pull-right" value="All prices"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="less-500">Под 500<input id="less-500" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="500-1000">500 - 1000<input id="500-1000" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="1000-1500">1000 - 1500<input id="1000-1500" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="1500-2000">1500 - 2000<input id="1500-2000"type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="over-2000">над 2000<input id="over-2000"type="checkbox" class="pull-right"/></label>
+                        </li>
+                    </ul>
+                    <ul class="nav list-group">
+                        <li class="list-group-item active">
+                            <label for="manifacture">Производител<input id="manifacture" title="toggle all" type="checkbox" class="all pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="Apple">Apple<input id="Apple" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="Samsung">Samsung<input id="Samsung" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="LG">LG<input id="LG" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="Sony">Sony<input id="Sony" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="Lenovo">Lenovo<input id="Lenovo" type="checkbox" class="pull-right"/></label>
+                        </li>
+                    </ul>
+
+                    <ul class="nav list-group">
+                        <li class="list-group-item active">
+                            <label for="rating">Рейтинг<input id="rating" title="toggle all" type="checkbox" class="all pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="five-stars">
+                            <span class="rating">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                            </span>
+                                <input id="five-stars" type="checkbox" class="pull-right"/>
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="four-stars">
+                            <span class="rating">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                                <input id="four-stars" type="checkbox" class="pull-right"/>
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="three-stars">
+                             <span class="rating">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                                <input id="three-stars" type="checkbox" class="pull-right"/>
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="two-stars">
+                             <span class="rating">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                                <input id="two-stars" type="checkbox" class="pull-right"/>
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="one-star">
+                             <span class="rating">
+                                <i class="price-text-color fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                                <input id="one-star" type="checkbox" class="pull-right"/>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <ul class="nav list-group">
+                        <li class="list-group-item active">
+                            <label for="OS">Операционна система<input id="OS" title="toggle all" type="checkbox" class="all pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="android">Android<input id="android" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="i-os">Ios<input id="i-os" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="windows">Windows<input id="windows" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="linux">Linux<input id="linux" type="checkbox" class="pull-right"/></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="others">Други<input id="others" type="checkbox" class="pull-right"/></label>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="col-sm-10 col-xs-12">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary pull-right">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary pull-right">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary pull-right">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary pull-right">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary pull-right">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="images/Samsung-Galaxy-S6-Edge-47.jpg" class="img-effect"/>
+                                </div>
+                                <div class="info">
+                                    <div class="rating hidden-xs">
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="price-text-color fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h5>
+                                            Име на продукта
+                                        </h5>
+                                        <h5 class="price-text-color">
+                                            1499.99лв.
+                                        </h5>
+                                    </div>
+                                    <div class="separator clear-left">
+
+                                        <p class="btn btn-details">
+                                            <i class="fa fa-list"></i>
+                                            <a href="#" class="hidden-xs">Детайли</a>
+                                        </p>
+                                        <p class="btn btn-add btn-primary">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <a href="#" class="hidden-xs">Купи</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                </section>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer" id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-3 col-sm-4 col-xs-6">
+                            <h3> Поръчки и доставка </h3>
+                            <ul>
+                                <li> <a href="#"> Моят акаунт </a> </li>
+                                <li> <a href="#"> Как да поръчам онлайн </a> </li>
+                                <li> <a href="#"> Доставка на поръчките </a> </li>
+                                <li> <a href="#"> Често задавани въпроси </a> </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2  col-sm-3 col-sm-4 col-xs-6">
+                            <h3> Магазин </h3>
+                            <ul>
+                                <li> <a href="#"> Телефони </a> </li>
+                                <li> <a href="#"> Таблети </a> </li>
+                                <li> <a href="#"> Лаптопи </a> </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4  col-sm-3 col-sm-6 col-xs-12 ">
+                            <h3> Връзка с нас </h3>
+                            <ul>
+                                <li>
+                                    <div class="input-append newsletter-box text-center">
+                                        <input type="text" class="full text-center" placeholder="Email ">
+                                        <button class="btn  bg-gray" type="button"> Пишете ни <i class="fa fa-long-arrow-right"> </i> </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3  col-sm-3 col-sm-12 col-xs-12 ">
+                            <h3> Социални мрежи </h3>
+                            <ul class="social">
+                                <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </div>
+            <!--/.footer-->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="pull-left"> Copyright © Team "Passiflora-edulis" IT Talents WEB3. All right reserved. </p>
+                    <!--<div class="pull-right">
+					<ul class="nav nav-pills payments">
+						<li><i class="fa fa-cc-visa"></i></li>
+						<li><i class="fa fa-cc-mastercard"></i></li>
+						<li><i class="fa fa-cc-amex"></i></li>
+						<li><i class="fa fa-cc-paypal"></i></li>
+					</ul>
+				</div>-->
+                </div>
+            </div>
+            <!--/.footer-bottom-->
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="libraries/jquery-1.11.3.min.js"></script>
+    <script src="libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        /* toggle all checkboxes in group */
+        $('.all').click(function(e){
+            e.stopPropagation();
+            var $this = $(this);
+            if($this.is(":checked")) {
+                $this.parents('.list-group').find("[type=checkbox]").prop("checked",true);
+            }
+            else {
+                $this.parents('.list-group').find("[type=checkbox]").prop("checked",false);
+                $this.prop("checked",false);
+            }
+        });
+    </script>
+</body>
+</html>
+

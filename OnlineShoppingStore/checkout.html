@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkout</title>
+	<link href="libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="css/languages.min.css" rel="stylesheet" />
+	<link href="sass/index.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container-fluid checkout">
+	<div class="row">
+		<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #E0F1FF">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="homePage.html" id="title">ИДИ купи</a>
+				</div>
+				<div class="collapse navbar-collapse row" id="myNavbar">
+
+					<ul class="nav navbar-nav">
+						<li class="dropdown mega-dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукти<span class="caret"></span></a>
+
+							<div class="dropdown-menu mega-dropdown-menu">
+								<div class="container-fluid">
+									<ul class="nav-list list-inline">
+										<li><a href="#"><img src="images/Samsung-Galaxy-S6-Edge-47.jpg"><div>Смартфони</div></a></li>
+										<li><a href="#"><img src="images/iPad_Air_2_and_iPad_mini_3.jpg" /><div>Таблети</div></a></li>
+										<li><a href="#"><img src="images/MacBook_Pro_Retina_2014_MG_1098.jpg" /><div>Лаптопи</div></a></li>
+										<li><a href="#"><img src="images/Special-offer.jpg" /><div>Промоции</div></a></li>
+										<li><a href="#"><img src="images/top-rated.jpg" /><div>Топ продукти</div></a></li>
+
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<div class="col-sm-3">
+						<form action="" class="navbar-form">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="search" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger">
+	                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+							</div>
+						</form>
+					</div>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#" id="my-acount" data-toggle="modal" data-target="#modal-login">
+								<span class="glyphicon glyphicon-user"></span>
+								<span>Моят акаунт</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" id="favorites">
+								<span class="glyphicon glyphicon-heart"></span>
+								<span>Любими</span>
+							</a>
+						</li>
+						<li>
+							<a href="shoppingCart.html" id="my-bag">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<span>Моята количка</span>
+								<span class="badge">0</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class=" lang-sm" lang="en"></span> / <span class="lang-sm" lang="bg"></span>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#"><span class="lang-sm lang-lbl-en" lang="en"></span></a></li>
+								<li><a href="#"><span class="lang-sm lang-lbl" lang="bg"></span></a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+
+		<div id="modal-login" class="modal fade" role="dialog" >
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Вход</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+
+							<form role="form" id="login-form">
+								<h2>Моля влезте в акаунта си</h2>
+								<hr class="colorgraph">
+								<div class="form-group">
+									<label for="display_name" class="control-label">Потребител</label>
+									<input type="text" name="display_name" id="display_name" class="form-control input-lg" tabindex="3">
+								</div>
+								<div class="form-group">
+									<label for="password" class="control-label">Парола</label>
+									<input type="password" name="password" id="password" class="form-control input-lg" tabindex="5">
+								</div>
+								<hr class="colorgraph">
+								<div class="row">
+									<div class="col-xs-6 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Влез</a></div>
+									<div class="col-xs-6 col-md-6"><a href="#" class="btn btn-primary btn-block btn-lg"  id="login-to-reg-btn">Регистрирай се</a></div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="modal-register" class="modal fade" role="dialog" >
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Регистрация</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+
+							<form role="form" id="register-form">
+								<h2>Моля регистрирайте се</h2>
+								<hr class="colorgraph">
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Име" tabindex="1">
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Фамилия" tabindex="2">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="display_name" id="username" class="form-control input-lg" placeholder="Потребител" tabindex="3">
+								</div>
+								<div class="form-group">
+									<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Имейл" tabindex="4">
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" name="password" id="register-password" class="form-control input-lg" placeholder="Парола" tabindex="5">
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Потвърди паролата" tabindex="6">
+										</div>
+									</div>
+								</div>
+								<hr class="colorgraph">
+								<div class="row">
+									<div class="col-xs-6 col-md-6"><input type="submit" value="Регистрирам се" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="container">
+		<div class="wizard" id="rootwizard">
+
+
+			<ul class="nav nav-wizard">
+
+				<li class="">
+					<a href="#tab1" data-toggle="tab">Детайли за купувача</a>
+				</li>
+
+				<li class="">
+					<a href="#tab2" data-toggle="tab">Доставка</a>
+				</li>
+
+				<li class="">
+					<a href="#tab3" data-toggle="tab">Плащане</a>
+				</li>
+
+				<li class="">
+					<a href="#tab4" data-toggle="tab">Потвърждение</a>
+				</li>
+
+				<li class="">
+					<a href="#tab5" data-toggle="tab">Поръчката е изпълнена</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="row tab-pane active" id="tab1">
+					<div class="page-header"><h4>&nbsp;</h4></div>
+					<div class="col-xs-6">
+						<div class="well">
+							<form id="loginForm-checkout" method="POST" action="">
+								<div class="form-group">
+									<label for="username-checkout" class="control-label">Потребител</label>
+									<input type="text" class="form-control" id="username-checkout" name="username" value="" required="required" title="Please enter you username">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group">
+									<label for="password-checkout" class="control-label">Парола</label>
+									<input type="password" class="form-control" id="password-checkout" name="password" value="" required="required" title="Please enter your password">
+									<span class="help-block"></span>
+								</div>
+								<div id="loginErrorMsg" class="alert alert-error hide">Грешно име или парола</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="remember" id="remember">Запомни вход
+									</label>
+								</div>
+								<button type="submit" class="btn btn-success btn-block">Влез</button>
+								<div>&nbsp;</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<p class="lead">Регестрирай се  <span class="text-success">безплатно</span></p>
+						<ul class="list-unstyled" style="line-height: 2">
+							<li><span class="fa fa-check text-success"></span> Преглед на поръчките</li>
+							<li><span class="fa fa-check text-success"></span> Бърза поръчка</li>
+							<li><span class="fa fa-check text-success"></span> Списък с любимим продукти</li>
+							<li><span class="fa fa-check text-success"></span> Бързо плащане</li>
+
+							<li><a href="/read-more/"><u>Прочети още</u></a></li>
+						</ul>
+						<p><a href="/new-customer/" class="btn btn-info btn-block">Да регестрирай ме</a></p>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab2">
+					<div class="page-header"><h4>Избери адрес за доставка</h4></div>
+					<div class="col-xs-6">
+						<p class="lead"> <span class="text-success">Актуален адрес:</span></p>
+						<ul class="list-unstyled" style="line-height: 2">
+							<li><span class="text-info"> Име: </span> Иван Червенков</li>
+							<li><span class="text-info"> Адрес: </span> София</li>
+							<li><span class="text-info"> Град: </span> София</li>
+							<li><span class="text-info"> Област: </span> София</li>
+							<li><span class="text-info"> Пощ.код: </span> 1000</li>
+						</ul>
+						<p><a href="" class="btn btn-info btn-block" style="margin-top: 160px">Избери</a></p>
+					</div>
+					<div class="col-xs-6">
+						<div class="well">
+							<p class="lead"> <span class="text-success">Избери нов адрес:</span></p>
+							<form id="addressForm-checkout" method="POST" action="">
+								<div class="row form-group">
+									<div class="col-sm-6" style="padding-left: 0;">
+										<label for="name-address" class="">Име</label>
+										<input type="text" class="form-control" name="name-address" id="name-address" placeholder="Име" />
+									</div>
+
+									<div class="col-sm-6" style="padding-right: 0;">
+										<label for="last-name-address">Фамилия</label>
+										<input type="text" class="form-control" name="last-name-address" id="last-name-address" placeholder="Фамилия" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="town-address">Град</label>
+									<input type="text" class="form-control" name="town-address" id="town-address" placeholder="Град" />
+								</div>
+
+								<div class="row">
+									<div class="form-group col-sm-6" style="padding-left: 0;">
+										<label for="state">Област</label>
+										<input type="text" class="form-control" name="state" id="state" placeholder="Област" />
+									</div>
+
+									<div class="form-group col-sm-6" style="padding-right: 0;">
+										<label for="postcode">Пощенски код</label>
+										<input type="text" class="form-control" name="postcode" id="postcode" placeholder="Пощенски код" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="address-address">Адрес</label>
+									<input type="text" class="form-control" name="address-address" id="address-address" placeholder="Адрес" />
+								</div>
+								<button type="submit" class="btn btn-success btn-block">Изпрати</button>
+								<div>&nbsp;</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab3">
+					<div class="page-header"><h4>Начин на плащане</h4></div>
+					<form action="" method="get" id="payment-methods">
+						<div class="form-group form-inline">
+							<label for="cash-on-delivery">
+								<input type="radio" class="form-control" id="cash-on-delivery" name="payment-methods">
+								Плащане при доставка
+							</label>
+						</div>
+						<div class="form-group form-inline">
+							<label for="pay-pal">
+								<input type="radio" class="form-control" id="pay-pal" name="payment-methods">
+								PayPal
+							</label>
+						</div>
+						<div class="form-group form-inline">
+							<label for="e-pay">
+								<input type="radio" class="form-control" id="e-pay" name="payment-methods">
+								Epay
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane" id="tab4">
+					<div class="page-header">
+						<h4>Информация за поръчката</h4>
+					</div>
+					<div class="container">
+						<div class="panel">
+							<div class="panel-body">
+								<ul class="list-unstyled" style="line-height: 2">
+									<li><span class="text-info"> Име: </span> Иван Червенков</li>
+									<li><span class="text-info"> Стойност на поръчката: </span> 2300 лв.</li>
+									<li><span class="text-info"> Начин на плащане: </span> Плащане при доставка</li>
+									<li>
+										<span class="text-info">
+											Адрес:
+										</span>
+										<ul>
+											<li><span> Адрес: </span> София</li>
+											<li><span> Град: </span> София</li>
+											<li><span> Област: </span> София</li>
+											<li><span> Пощ.код: </span> 1000</li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<div class="page-header"><h4>&nbsp;</h4></div>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3>Вашата поръчка е получена</h3>
+						</div>
+						<div class="panel-body">
+							<ul class="list-unstyled">
+								<li><span class="text-success"><h3>Благодарим ви за покупката!</h3></span></li>
+								<li><span class="text-info">Вашата поръчка е с ID: </span>1234567890</li>
+								<div>&nbsp;</div>
+								<a href="homePage.html" class="btn btn-sm btn-primary">Към магазина</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--<ul class="pager wizard">
+					<li class="previous first" style="display:none;"><a href="#">First</a></li>
+					<li class="previous"><a href="#">Предишна</a></li>
+					<li class="next last" style="display:none;"><a href="#">Last</a></li>
+					<li class="next"><a href="#">Следваща</a></li>
+				</ul>-->
+				<div class="clearfix">
+					<div class="pull-left">
+						<input type='button' class='btn button-previous' name='previous' value='Предишна' />
+					</div>
+					<div class="pull-right">
+						<input type='button' class='btn button-next' name='next' value='Следваща' />
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="libraries/jquery-1.11.3.min.js"></script>
+	<script src="libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+	<script type="text/javascript">
+		/*$(document).ready(function() {
+			$('#rootwizard').bootstrapWizard();
+		});*/
+
+		$(document).ready(function() {
+			$('#rootwizard').bootstrapWizard({'nextSelector': '.button-next', 'previousSelector': '.button-previous'});
+		});
+	</script>
+
+</div>
+</body>
+</html>

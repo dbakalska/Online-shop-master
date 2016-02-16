@@ -1,0 +1,94 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+.price-text-color {
+    color: #219FD1;
+}
+
+#carousel-bestseller, #carousel-top-rated, #carousel-special-offers {
+    .col-item {
+        border: 1px solid #E1E1E1;
+        border-radius: 5px;
+        background: #FFF;
+
+        .photo img {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .info {
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            margin-top: 1px;
+            .rating {
+                color: #777;
+            }
+        }
+
+        .price {
+            margin-top: 5px;
+            h5 {
+                line-height: 20px;
+                margin: 0;
+            }
+        }
+
+        .rating {
+            font-size: 17px;
+            text-align: right;
+            line-height: 52px;
+            margin-bottom: 10px;
+            height: 52px;
+        }
+
+        .separator {
+            border-top: 1px solid #E1E1E1;
+            margin: 5px 0;
+            p {
+                line-height: 20px;
+                margin-bottom: 0;
+                margin-top: 10px;
+                text-align: center;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .btn-add {
+            float: left;
+            a {
+                color: white;
+            }
+        }
+
+        .btn-details {
+            float: left;
+            padding-left: 0;
+        }
+    }
+
+    .col-item:hover .info {
+        background-color: #F5F5DC;
+    }
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+
+.controls
+{
+    margin-top: 20px;
+}
+
+[data-slide="prev"]{
+    margin-right: 10px;
+}
+
+#bestsellers, #special-offers, #top-rated {
+    padding: 10px;
+    margin: 20px 0;
+}
+

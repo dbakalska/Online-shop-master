@@ -1,0 +1,26 @@
+@import "_modals.scss";
+@import '_header.scss';
+@import '_footer.scss';
+@import "carousels";
+@import '_homePage.scss';
+@import '_category.scss';
+@import '_productPage.scss';
+@import '_login.scss';
+@import '_userAccount.scss';
+@import '_admin.scss';
+@import "_checkout.scss";
+@import '_shoppingCart.scss';
+
+$font-title: 'Marck Script', cursive;
+
+#title{
+  margin: 0 10px;
+}
+
+body {
+  background-color: #F5F5F5;
+  padding: 0;
+  .container-fluid {
+    padding: 0;
+  }
+}

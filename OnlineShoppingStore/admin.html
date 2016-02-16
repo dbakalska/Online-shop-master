@@ -1,0 +1,587 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Admin</title>
+    <link href="libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/languages.min.css" rel="stylesheet" />
+    <link href="sass/index.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="admin-nav">
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #E0F1FF">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homePage.html" id="title">ИДИ купи</a>
+                </div>
+                <div class="collapse navbar-collapse row" id="myNavbar">
+                    <div class="col-sm-2">
+
+                    </div>
+
+                    <div class="col-sm-5">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="search" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Админ</a></li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/DSC_4987a.jpg" alt="Profile image" id="profile-image"
+                                         class="center-block img-circle img-thumbnail img-responsive" width="35" height="35" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!--<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #E0F1FF">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ИДИ купи</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Админ</a></li>
+                        <li>
+                            <a href="#">
+                                <img src="images/DSC_4987a.jpg" alt="Profile image" id="profile-image"
+                                     class="center-block img-circle img-thumbnail img-responsive" width="35" height="35" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>-->
+    </div>
+
+    <div class="container" id="admin-container">
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="panel-group">
+                    <div class="panel-default">
+                        <div class="panel-heading">Детайли Продукти</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="#products">Списък продукти</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="" data-toggle="modal" data-target="#myModal">Добави продукт</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-default">
+                        <div class="panel-heading">Детайли потребители</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="#users">Потребители</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-default">
+                        <div class="panel-heading">Детайли поръчки</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="#orders-history">История</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-md-9">
+
+
+                <div class="panel panel-default" id="products">
+                    <div class="panel-heading">
+                        <h4>Продукти</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Снимка</th>
+                                            <th>ID</th>
+                                            <th>Продукт</th>
+                                            <th>Производител</th>
+                                            <th>Наличност</th>
+                                            <th>Ед. цена</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a class="thumbnail pull-left" href="#" style="margin-right:10px;"> <img class=" media-object" src="images/MacBook_Pro_Retina_2014_MG_1098.jpg" style="width: 72px; height: 32px;"> </a>
+                                            </td>
+                                            <td>
+                                                <h5>IDI0123</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Продукт</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Производител</h5>
+                                            </td>
+                                            <td>
+                                                <h5>3456</h5>
+                                            </td>
+                                            <td>
+                                                <h5>69.96</h5>
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                     Редактирай
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="thumbnail pull-left" href="#" style="margin-right:10px;"> <img class=" media-object" src="images/MacBook_Pro_Retina_2014_MG_1098.jpg" style="width: 72px; height: 32px;"> </a>
+                                            </td>
+                                            <td>
+                                                <h5>IDI0123</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Продукт</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Производител</h5>
+                                            </td>
+                                            <td>
+                                                <h5>3456</h5>
+                                            </td>
+                                            <td>
+                                                <h5>69.96</h5>
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    Редактирай
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="thumbnail pull-left" href="#" style="margin-right:10px;"> <img class=" media-object" src="images/Samsung-Galaxy-S6-Edge-47.jpg" style="width: 72px; height: 32px;"> </a>
+                                            </td>
+                                            <td>
+                                                <h5>IDI0123</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Продукт</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Производител</h5>
+                                            </td>
+                                            <td>
+                                                <h5>3456</h5>
+                                            </td>
+                                            <td>
+                                                <h5>69.96</h5>
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    Редактирай
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="thumbnail pull-left" href="#" style="margin-right:10px;"> <img class=" media-object" src="images/MacBook_Pro_Retina_2014_MG_1098.jpg" style="width: 72px; height: 32px;"> </a>
+                                            </td>
+                                            <td>
+                                                <h5>IDI0123</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Продукт</h5>
+                                            </td>
+                                            <td>
+                                                <h5>Производител</h5>
+                                            </td>
+                                            <td>
+                                                <h5>3456</h5>
+                                            </td>
+                                            <td>
+                                                <h5>69.96</h5>
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    Редактирай
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default" id="users">
+                    <div class="panel-heading">
+                        <h4>Потребители</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Име</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs">Детайли</button>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="orders-history">
+                    <div class="panel-heading">
+                        <h4>История на поръчките</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Номер на поръчка</th>
+                                        <th>Потребител</th>
+                                        <th>Състояние на поръчката</th>
+                                        <th>Дата</th>
+                                        <th>Стойност</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td>Изпратена</td>
+                                        <td>27.01.2016</td>
+                                        <td>5069.31<span>лв.</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td>Изпратена</td>
+                                        <td>27.01.2016</td>
+                                        <td>5069.31<span>лв.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td>Изпратена</td>
+                                        <td>27.01.2016</td>
+                                        <td>5069.31<span>лв.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td>Изпратена</td>
+                                        <td>27.01.2016</td>
+                                        <td>5069.31<span>лв.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="number-order" numberorder="">
+                                                <span>IDI0123456789</span>
+                                            </a>
+                                        </td>
+                                        <td>Иван Червенков</td>
+                                        <td>Изпратена</td>
+                                        <td>27.01.2016</td>
+                                        <td>5069.31<span>лв.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Добави продукт</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="well panel panel-default" id="add-product-panel">
+                           <!-- <div class="panel-heading"><h2>Добави продукт</h2></div>-->
+                            <div class="panel-body">
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <label for="name" class="">Име</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Име" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="brand" class="">Производител</label>
+                                        <input type="text" class="form-control" name="brand" id="brand" placeholder="Производител" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="category" class="">Категория</label>
+                                        <input type="text" class="form-control" name="category" id="category" placeholder="Категория" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="quantity" class="">Количество</label>
+                                        <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Количество" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description" class="">Описание</label>
+                                        <input type="text" class="form-control" name="description" id="description" placeholder="Описание" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="">Снимка-01</label>
+                                        <input type="file" class="form-control" name="image-1" id="image-1"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="">Снимка-02</label>
+                                        <input type="file" class="form-control" name="image-2" id="image-2" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="">Снимка-03</label>
+                                        <input type="file" class="form-control" name="image-3" id="image-3" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Добави продукт</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3> Поръчки и доставка </h3>
+                        <ul>
+                            <li> <a href="#"> Моят акаунт </a> </li>
+                            <li> <a href="#"> Как да поръчам онлайн </a> </li>
+                            <li> <a href="#"> Доставка на поръчките </a> </li>
+                            <li> <a href="#"> Често задавани въпроси </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3> Магазин </h3>
+                        <ul>
+                            <li> <a href="#"> Телефони </a> </li>
+                            <li> <a href="#"> Таблети </a> </li>
+                            <li> <a href="#"> Лаптопи </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12 ">
+                        <h3> Връзка с нас </h3>
+                        <ul>
+                            <li>
+                                <div class="input-append newsletter-box text-center">
+                                    <input type="text" class="full text-center" placeholder="Email ">
+                                    <button class="btn  bg-gray" type="button"> Пишете ни <i class="fa fa-long-arrow-right"> </i> </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3  col-md-3 col-sm-12 col-xs-12 ">
+                        <h3> Социални мрежи </h3>
+                        <ul class="social">
+                            <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left"> Copyright © Team "Passiflora-edulis" IT Talents WEB3. All right reserved. </p>
+                <!--<div class="pull-right">
+					<ul class="nav nav-pills payments">
+						<li><i class="fa fa-cc-visa"></i></li>
+						<li><i class="fa fa-cc-mastercard"></i></li>
+						<li><i class="fa fa-cc-amex"></i></li>
+						<li><i class="fa fa-cc-paypal"></i></li>
+					</ul>
+				</div>-->
+            </div>
+        </div>
+        <!--/.footer-bottom-->
+    </footer>
+
+
+    <!-- JavaScript -->
+    <!-- Lib -->
+    <script src="libraries/jquery-1.11.3.min.js"></script>
+    <script src="libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+    <!--  -->
+</body>
+</html>

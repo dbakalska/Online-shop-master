@@ -1,0 +1,54 @@
+$font-title: 'Marck Script', cursive;
+$font-primary: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+#login-page {
+    padding: 0;
+    background-image: url('../images/Samsung-Galaxy-S6-Edge-47.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    #title {
+        font-family: $font-title;
+    }
+    .row {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        margin: 0;
+        color: white;
+    }
+
+    nav {
+            background-color:#ACE9FF;
+            text-align:center;
+        }
+    #wellcome-container {
+    color:#0094ff;
+    font-family: $font-primary; 
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    }
+
+    #form-container {
+        margin-top: 21px;
+        padding-left: 144px;
+        padding-right: 13px;
+    }
+
+    #password-recovery a {
+        font-size:1.8em;
+    }
+
+    .form-control {
+        opacity: 0.8;
+    }
+
+    .checkbox {
+        color: white;
+    }
+}
+
+
+
+
+
